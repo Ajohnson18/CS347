@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cruise Control</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="loadParams()">
+        <header>
+            <h1>Software Guys: Cruise Control v1.0</h1>
+        </header>
+        <seciton id="ui">
+            <img src="./media/wheel.png" usemap="#image-map">
+
+            <map name="image-map">
+                <area target="_blank" alt="res_speed" title="res_speed" onclick="resSpeed()" coords="785,457,735,425" shape="rect">
+                <area target="_blank" alt="cc_on" title="cc_on" onclick="turnOn()" coords="762,476,17" shape="circle">
+                <area target="_blank" alt="set_speed" title="set_speed" onclick="setSpeed()" coords="734,495,791,526" shape="rect">
+            </map>
+        </seciton>
+        <section id="log">
+            <p>Cruise Control Log...<br></p>
+        </section>
+        <section id="speed">
+            <h1 id="speedometer">0mph</h1>
+        </section>
+        <section id="buttons">
+            <button onmousedown="brake()" onmouseup="stopBrake()">Brake</button>
+            <button onmousedown="accelerate()" onmouseup="stopAccelerate()">Accelerate</button>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>
